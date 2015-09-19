@@ -5,6 +5,8 @@ module Nominatim
 
     DEFAULT_USER_AGENT = "Nominatim Ruby Gem #{Nominatim::VERSION}"
 
+    DEFAULT_KEY = nil
+    
     DEFAULT_EMAIL = nil
 
     DEFAULT_LANGUAGE = 'en'
@@ -17,6 +19,7 @@ module Nominatim
     VALID_OPTIONS_KEYS = [
       :endpoint,
       :user_agent,
+      :key,
       :email,
       :accept_language,
       :timeout,
@@ -38,6 +41,7 @@ module Nominatim
     def reset!
       self.endpoint         = DEFAULT_ENDPOINT
       self.user_agent       = DEFAULT_USER_AGENT
+      self.key              = DEFAULT_KEY
       self.email            = DEFAULT_EMAIL
       self.accept_language  = DEFAULT_LANGUAGE
       self.timeout          = DEFAULT_TIMEOUT
